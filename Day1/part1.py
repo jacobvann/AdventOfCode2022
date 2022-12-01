@@ -39,7 +39,7 @@
 # Jacob's Solution
 
 # first open the file
-with open('Day1/input.txt') as f:
+with open('input.txt') as f:
     lines = f.readlines()
 
     # initialize counters
