@@ -34,27 +34,16 @@ with open('input.txt') as f:
         # condition where the line is blank
         if line == "\n":
             # check if the current calories are the new max
-            if cur_calories > max_calories:
-                max_calories = cur_calories
-            if cur_calories < min_calories:
-                min_calories = cur_calories
             calorie_groups.append(cur_calories)
             cur_calories = 0
-            total_calorie_groups += 1
         # check if it's a number greater than 0
         elif int(line) > 0:
             # add it to the "current calories"
             cur_calories += int(line)
-            total_calories += int(line)
-            total_calorie_items += 1
+
 
     # append the last group
     calorie_groups.append(cur_calories)
-
-    # last check
-    if cur_calories > max_calories:
-        max_calories = cur_calories
-        total_calorie_groups += 1
 
     # sort the list descending
     calorie_groups.sort(reverse=True)
